@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <section>
+    <p class="texts">
+      I said I would never change, I would never leave you
+      Told you I would never lie, you said "I believe you"
+      That's when everything was clearer, back when shit was see-through
+      Then murky waters came to part us, now you're in my rearview
+      And I ran, and I fell, something like your tears do
+      And I know you tried to tell me, but I couldn't hear you
+      Girl, it never should've ended like that
+    </p>
+  </section>
+
+  <script>
+    const texts = document.querySelector(".texts");
+    texts.innerHTML = texts.textContent.replace(/\S/g, "<span>$&</span>");
+
+    const letters = document.querySelectorAll("span");
+    for(let i = 0; i < letters.length; i++) {
+      letters[i].addEventListener("mouseover", function() {
+        letters[i].classList.add("active");
+      })
+    }
+  </script>
+</body>
+</html>
